@@ -1,3 +1,4 @@
+from openai import OpenAI
 import streamlit as st
 from MyRAG import rangkuman, LLM_chat
 
