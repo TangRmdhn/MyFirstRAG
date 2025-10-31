@@ -30,7 +30,8 @@ for message in st.session_state.messages:
 if uploaded_pdf:
     if prompt := st.chat_input("Tanyakan apa saja tentang file"):
         # Display user message in chat message container
-        st.chat_message("user").markdown(prompt)
+        with st.chat_message("user"):
+            st.markdown(prompt)
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
 
